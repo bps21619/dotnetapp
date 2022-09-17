@@ -1,0 +1,12 @@
+version: 0.0
+os: windows
+files:
+  - source: /
+    destination: C:\inetpub\wwwroot/app
+hooks:
+   BeforeInstall:
+     - location: /appstop.bat       
+       runas: administrator
+   ApplicationStart:
+     - location: /appstart.bat       
+       runas: administrator
